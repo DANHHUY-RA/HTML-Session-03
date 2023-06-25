@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo-Table</title>
+  </head>
+  <body style="background-color: lightgray">
+    <!-- table -->
+    <!-- 
+        + <table> : thẻ tạo bảng
+        Gồm các thẻ : 
+         <caption>
+        <thead> <tbody> <tfoot>
+     -->
+    <table border="1" align="left" width="500" height="200">
+      <p>Demo Session 03-table</p>
+      <caption>
+        Bang nhan vien
+      </caption>
+      <!-- Xac dinh phan dau bang  -->
+      <thead bgcolor="gray">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <!-- xac dinh phan body  -->
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Ngyen Van A</td>
+          <td>26</td>
+          <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td rowspan="2">Ngyen Van A</td>
+          <td>26</td>
+          <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>26</td>
+          <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td colspan="3">Tong nhan vien</td>
+        </tr>
+      </tbody>
+
+      <br />
+      <!-- xac dinh phan cuoi bang : ???-->
+      <tfoot></tfoot>
+    </table>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- cac thuoc tinh(attribule) co trong table : 
+        thuong dc xu ly =CSS nen co the k can xac dinh truc tiep trong HTML
+     +align   bo tri vi tri table trong HTML : center, left(defaut), right 
+     +vertical-align ???
+     +boder : xác định độ dầy của đuong viền bao quanh table
+     +cellpadding : Xác đinh khoang cach noi dung vs mép của cột
+     +cellspacing : xac dinh khoang cach 2 cot , 2 hang 
+     +width : xac dinh do rong cho bang or cac o 
+     +heigh 
+     -->
+
+    <!-- thuc hanh table 1 -->
+    <h2>Thuc hanh table 1</h2>
+    <table border="1" cellpadding="5">
+      <thead>
+        <tr bgcolor="gray">
+          <th>Thang</th>
+          <th>Doanh thu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Thang 1</td>
+          <td>$1000</td>
+        </tr>
+
+        <tr>
+          <td>Thang 2</td>
+          <td>$500</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Tong : $1500</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+    <!-- thuc hanh table 2 -->
+    <h2>Thuc hanh table 2</h2>
+    <table border="1" cellpadding="5">
+      <thead>
+        <tr bgcolor="gray">
+          <th>Quy</th>
+          <th>Thang</th>
+          <th>Doanh thu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">Quy 1</td>
+          <td>thang 1</td>
+          <td>$1000</td>
+        </tr>
+
+        <tr>
+          <!-- <td>Thang 2</td> -->
+          <td>thang 2</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <!-- <td>Thang 2</td> -->
+          <td>thang 3</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Quy 2</td>
+          <td>thang 4</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <!-- <td>Thang 2</td> -->
+          <td>thang 5</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <!-- <td>Thang 2</td> -->
+          <td>thang 6</td>
+          <td>$500</td>
+        </tr>
+      </tbody>
+      <!-- <tfoot>
+        <tr>
+          <td colspan="3">Tong : $1500</td>
+        </tr>
+      </tfoot> -->
+    </table>
+    <br />
+    <!-- Thuc hanh table 3 -->
+
+    <h2>Thuc hanh table 3</h2>
+    <table border="1">
+      <caption>
+        Rikkei Academy - Order
+      </caption>
+      <tr>
+        <td rowspan="11">RA</td>
+      </tr>
+      <tr>
+        <td>Order No:</td>
+        <td colspan="3">#RA001</td>
+      </tr>
+      <tr>
+        <td>Order Date:</td>
+        <td colspan="3">02/12/2022</td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center"><b>Custormer</b></td>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td colspan="3">Nguyen Van A</td>
+      </tr>
+      <tr>
+        <td>Adress:</td>
+        <td colspan="3">
+          7th floor, Tower A , Song Da building, Nam Tu Liem , District, Ha Noi
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center"><b>Order Detail</b></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>HTML</td>
+        <td>Book</td>
+        <td align="right">10.00$</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CSS</td>
+        <td>Book</td>
+        <td align="right">10.00$</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Javascript</td>
+        <td>DVD</td>
+        <td align="right">10.00$</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="right"><b>Total:</b></td>
+
+        <td align="right">72.00$</td>
+      </tr>
+    </table>
+    <br /><br /><br />
+  </body>
+</html>
